@@ -17,9 +17,6 @@ def articles():
 @app.route('/articles/{article_id}')
 def get_one_article(article_id):
     for article in article_list:
-        print(type(article.get('id')))
-        print(type(article_id))
-
         if article.get('id') == article_id:
             return article
 
